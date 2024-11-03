@@ -1,0 +1,67 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #D0E4AE;
+    color: #35122e;
+}
+
+h1, h2 {
+    color: #6B256F;
+}
+
+.section {
+    padding: 50px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+
+.projects .project {
+    display: inline-block;
+    margin: 20px;
+    padding: 15px;
+    background-color: #93B4DB;
+    color: #35122e;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.projects .project:hover {
+    transform: scale(1.1);
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #35122e;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #194B32;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6B256F;
+}

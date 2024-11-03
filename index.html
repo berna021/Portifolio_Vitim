@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Vitor Hugo Renhe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0d462c',
+                        secondary: '#35122e',
+                        accent: '#93B4DB',
+                        'light-accent': '#D0E4AE',
+                        'dark-accent': '#194B32'
+                    },
+                    animation: {
+                        'fade-in-delay': 'fadeIn 2s ease-in-out 1s forwards',
+                        'bounce-slow': 'bounce 3s infinite',
+                        'move-up-down': 'moveUpDown 5s ease-in-out infinite',
+                        'move-left-right': 'moveLeftRight 5s ease-in-out infinite',
+                        'slide-in': 'slideIn 1s ease-in-out forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        moveUpDown: {
+                            '0%, 100%': { transform: 'translateY(-10px)' },
+                            '50%': { transform: 'translateY(10px)' },
+                        },
+                        moveLeftRight: {
+                            '0%, 100%': { transform: 'translateX(-20px)' },
+                            '50%': { transform: 'translateX(20px)' },
+                        },
+                        slideIn: {
+                            '0%': { transform: 'translateX(-100%)', opacity: '0' },
+                            '100%': { transform: 'translateX(0)', opacity: '1' },
+                        },
+                    },
+                }
+            },
+            darkMode: 'class', 
+        }
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body class="bg-light-accent dark:bg-gray-900 text-secondary dark:text-white font-sans">
+
+    <nav class="bg-gradient-to-r from-[#0b3e27] to-[#197149] dark:bg-gradient-to-r dark:from-gray-800 dark:to-gray-900 text-white p-4 fixed w-full z-40">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-xl font-bold">Vitor Hugo Renhe</div>
+            <div class="hidden md:flex space-x-4">
+                <a href="#inicio" class="mr-4 hover:text-accent dark:hover:text-light-accent">Início</a>
+                <a href="#sobre" class="mr-4 hover:text-accent dark:hover:text-light-accent">Sobre</a>
+                <a href="#competencias" class="mr-4 hover:text-accent dark:hover:text-light-accent">Competências</a>
+                <a href="#portfolio" class="mr-4 hover:text-accent dark:hover:text-light-accent">Portfólio</a>
+                <a href="#contato" class="hover:text-accent dark:hover:text-light-accent">Contato</a>
+            </div>
+            <button id="theme-toggle" class="bg-light-accent z-10 dark:bg-dark-accent text-primary dark:text-light-accent p-2 rounded-lg ml-4 focus:outline-none transition duration-300">
+                Alternar Tema
+            </button>
+        </div>
+    </nav>
+
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center bg-gradient-to-r from-primary to-accent dark:from-gray-800 dark:to-gray-700 text-white overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div
+                class="absolute top-0 left-0 w-96 h-96 bg-accent opacity-20 rounded-full blur-2xl animate-move-up-down">
+            </div>
+            <div
+                class="absolute bottom-0 right-0 w-80 h-80 bg-light-accent opacity-20 rounded-full blur-2xl animate-move-left-right">
+            </div>
+        </div>
+
+        <div class="container mx-auto text-center z-10 px-4">
+            <h1 class="text-4xl md:text-6xl font-bold animate-slide-in text-shadow-md">Olá, eu sou <span
+                    class="text-accent">Vitor Hugo Renhe</span></h1>
+            <p class="mt-4 text-lg md:text-2xl animate-fade-in-delay">Estudante de Técnico de TI no Cotemig e entusiasta
+                de tecnologia.</p>
+
+            <img src="/img/perfil1.jpg" alt="Foto de Vitor Hugo Renhe"
+                class="w-36 h-36 md:w-48 md:h-48 rounded-full mx-auto mt-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105">
+
+            <a href="#portfolio"
+                class="inline-block mt-10 bg-dark-accent text-white py-4 px-8 rounded-full text-lg hover:bg-primary transition-all duration-300 transform hover:scale-105 animate-fade-in-delay">
+                Veja meus Projetos
+            </a>
+
+            <div class="mt-8 flex justify-center space-x-4">
+                <a href="https://github.com/seu-usuario" class="text-white hover:text-gray-300 transition-colors">
+                    <svg class="w-6 h-6 md:w-8 md:h-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24">
+                        <path d="...GitHub SVG Path..." />
+                    </svg>
+                </a>
+                <a href="https://linkedin.com/in/seu-usuario" class="text-white hover:text-gray-300 transition-colors">
+                    <svg class="w-6 h-6 md:w-8 md:h-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24">
+                        <path d="...LinkedIn SVG Path..." />
+                    </svg>
+                </a>
+                <a href="https://instagram.com/seu-usuario" class="text-white hover:text-gray-300 transition-colors">
+                    <svg class="w-6 h-6 md:w-8 md:h-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24">
+                        <path d="...Instagram SVG Path..." />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="min-h-screen flex items-center justify-center bg-light-accent dark:bg-gray-800 text-secondary dark:text-gray-300 py-16 px-4">
+        <div class="container mx-auto flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 h-1/2 grid max-h-screen overflow-hidden grid-cols-2 gap-4 px-4 md:px-8 mb-8 lg:mb-0">
+                <div class="relative w-full h-0 pb-[100%]">
+                    <img src="/img/perfil.jpeg" alt="Foto 1"
+                        class="absolute inset-0 w-full h-full object-cover rounded-lg shadow-lg">
+                </div>
+                <div class="relative w-full h-0 pb-[100%]">
+                    <img src="/img/foto2.jpeg" alt="Foto 2"
+                        class="absolute inset-0 w-full h-full object-cover rounded-lg shadow-lg">
+                </div>
+                <div class="relative w-full h-0 pb-[100%]">
+                    <img src="/img/foto3.jpeg" alt="Foto 3"
+                        class="absolute inset-0 w-full h-full object-cover rounded-lg shadow-lg">
+                </div>
+                <div class="relative w-full h-0 pb-[100%]">
+                    <img src="/img/foto4.jpeg" alt="Foto 4"
+                        class="absolute inset-0 w-full h-full object-cover rounded-lg shadow-lg">
+                </div>
+            </div>
+
+            <div class="lg:w-1/2 px-4 md:px-8">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Sobre Mim</h2>
+                <p class="text-base md:text-lg">Meu nome é Vitor Hugo Renhe, tenho 17 anos e estou cursando Técnico em
+                    Informática no Cotemig. Sempre fui apaixonado por tecnologia, o que me levou a focar na área de
+                    desenvolvimento de software. Busco constantemente aprender novas linguagens e frameworks, aplicando
+                    esses conhecimentos em projetos práticos.</p>
+                <p class="text-base md:text-lg mt-4">Além do desenvolvimento de software, tenho alguns hobbies que me
+                    ajudam a relaxar e me divertir, como jogar futebol com os amigos e acompanhar campeonatos
+                    esportivos. O esporte me ensina a importância do trabalho em equipe e a perseverança, habilidades
+                    que levo também para o campo da tecnologia.</p>
+                <p class="text-base md:text-lg mt-4">Acredito que o equilíbrio entre estudo, hobbies e vida social é
+                    essencial para manter a criatividade e a motivação. Estou sempre aberto a novas oportunidades de
+                    aprendizado e desafios.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="competencias" class="min-h-screen bg-primary dark:bg-gray-900 text-white py-16 px-4">
+        <div class="container mx-auto flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 px-4 md:px-8 py-8 md:py-16 mb-8 lg:mb-0">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">Minha Experiência</h2>
+                <p class="text-base md:text-lg">Durante minha jornada no Cotemig, desenvolvi diversas competências em
+                    linguagens de programação e frameworks. Desde a criação de sites estáticos com HTML e CSS, até o
+                    desenvolvimento de aplicações dinâmicas utilizando JavaScript e PHP. Tenho familiaridade com bancos
+                    de dados SQL e já explorei o desenvolvimento back-end com C#.</p>
+                <p class="text-base md:text-lg mt-4">Estou sempre buscando aprender novas tecnologias e metodologias de
+                    desenvolvimento, aplicando os conhecimentos em projetos práticos e colaborando em equipes.</p>
+            </div>
+
+            <div class="lg:w-1/2 flex flex-wrap justify-center gap-6 px-4 md:px-8">
+                <div class="flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5"
+                        class="w-12 h-12 md:w-16 md:h-16 mb-2">
+                    <span>HTML5</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3"
+                        class="w-12 h-12 md:w-16 md:h-16 mb-2">
+                    <span>CSS3</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                        alt="JavaScript" class="w-12 h-12 md:w-16 md:h-16 mb-2">
+                    <span>JavaScript</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" alt="PHP"
+                        class="w-12 h-12 md:w-16 md:h-16 mb-2">
+                    <span>PHP</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#"
+                        class="w-12 h-12 md:w-16 md:h-16 mb-2">
+                    <span>C#</span>
+                </div>
+                <div class="flex flex-col items-center">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL"
+                        class="w-12 h-12 md:w-16 md:h-16 mb-2">
+                    <span>SQL</span>
+                </div>
+            </div>
+        </div>
+
+        <section id="portfolio" class="bg-white py-16 px-4">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-10">Portfólio</h2>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div
+                            class="swiper-slide bg-accent text-white p-6 md:p-8 rounded-lg shadow-lg hover:scale-105 transform transition duration-300">
+                            <img src="/img/projeto1.png" alt="Imagem do Projeto 1"
+                                class="w-full h-32 md:h-40 object-cover rounded-md mb-4">
+                            <h3 class="text-xl md:text-2xl font-bold">Gusto Italiano</h3>
+                            <p>Site de Delivery.</p>
+                            <a href=""></a>
+                        </div>
+                        <div
+                            class="swiper-slide bg-accent text-white p-6 md:p-8 rounded-lg shadow-lg hover:scale-105 transform transition duration-300">
+                            <img src="/img/projeto2.png" alt="Imagem do Projeto 2"
+                                class="w-full h-32 md:h-40 object-cover rounded-md mb-4">
+                            <h3 class="text-xl md:text-2xl font-bold">Elit Photos</h3>
+                            <p>Portfólio de fotos.</p>
+                        </div>
+                        <div
+                            class="swiper-slide bg-accent text-white p-6 md:p-8 rounded-lg shadow-lg hover:scale-105 transform transition duration-300">
+                            <img src="/img/projeto3.png" alt="Imagem do Projeto 3"
+                                class="w-full h-32 md:h-40 object-cover rounded-md mb-4">
+                            <h3 class="text-xl md:text-2xl font-bold">Ogani</h3>
+                            <p>Site de Delivery.</p>
+                        </div>
+
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <section id="contato" class="min-h-screen bg-gradient-to-tr from-accent via-light-accent to-white dark:from-gray-800 dark:via-gray-700 dark:to-gray-600 py-16">
+        <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between space-y-10 lg:space-y-0 lg:space-x-20">
+            <div class="max-w-lg text-center lg:text-left">
+                <h2 class="text-5xl font-bold text-primary dark:text-white mb-6">Entre em Contato</h2>
+                <p class="text-lg text-secondary dark:text-gray-400 mb-6">
+                    Ficou interessado no meu trabalho? Adoraria discutir como posso ajudar a trazer soluções criativas
+                    para seus projetos. Entre em contato através do formulário abaixo ou pelas minhas redes sociais.
+                </p>
+                <p class="text-lg text-secondary dark:text-gray-400">
+                    Estou sempre aberto a novas oportunidades e colaborações.
+                </p>
+            </div>
+
+            <div class="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-2xl w-full max-w-lg">
+                <form action="#" class="space-y-6">
+                    <div>
+                        <label for="name" class="block text-lg text-primary dark:text-white font-semibold mb-2">Nome</label>
+                        <input type="text" id="name" placeholder="Seu nome completo"
+                            class="w-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-accent dark:focus:ring-gray-500 transition duration-300">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-lg text-primary dark:text-white font-semibold mb-2">Email</label>
+                        <input type="email" id="email" placeholder="Seu melhor email"
+                            class="w-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-accent dark:focus:ring-gray-500 transition duration-300">
+                    </div>
+                    <div>
+                        <label for="message" class="block text-lg text-primary dark:text-white font-semibold mb-2">Mensagem</label>
+                        <textarea id="message" placeholder="Escreva sua mensagem aqui" rows="5"
+                            class="w-full p-4 border border-gray-300 dark:border-gray-600 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-accent dark:focus:ring-gray-500 transition duration-300"></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit"
+                            class="bg-primary dark:bg-gray-700 text-white py-3 px-8 rounded-full font-bold text-lg hover:bg-dark-accent dark:hover:bg-gray-600 transition duration-300 transform hover:scale-105 shadow-md">
+                            Enviar Mensagem
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-primary dark:bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>© 2024 Vitor Hugo Renhe. Todos os direitos reservados.</p>
+            <div class="mt-2">
+                <a href="https://github.com/otaldovh" target="_blank"
+                    class="text-white hover:text-accent mx-2">GitHub</a>
+                <a href="https://www.linkedin.com/in/vitor-hugo-renhe?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+                    target="_blank" class="text-white hover:text-accent mx-2">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        const swiper = new Swiper('.mySwiper', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                },
+            },
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+
+</html>
